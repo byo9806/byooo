@@ -4,60 +4,101 @@
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-.float-left {
-  float: left !important;
-}
-
-.float-center {
-  margin: 0px auto !important;
-}
-
-.float-right {
-  float: right !important;
-}
-
 * {
   margin: 0px; padding: 0px;
   font-family: "Nanum Gothic";
 }
-
 html, body {
   height: 100%;
 }
-
 body {
-  background-color: #CCC;
+  background-color: #FFF;
+}
+a {
+  text-decoration: none;
+}
+
+.float-left {
+  float: left !important;
+}
+.float-center {
+  margin: 0px auto !important;
+}
+.float-right {
+  float: right !important;
 }
 
 .header {
-  position: fixed; top: 0px; z-index: 1;
-  width: 100%; height: 80px; line-height: 80px;
-  color: #000; background-color: #FFF; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-.page {
-  margin-top: 100px; margin-bottom: 20px;
-}
-
-.container {
-  width: 1200px; margin: 0px auto;
-}
-
-.page .box {
-  margin: 20px; padding: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  color: #000;
   background-color: #FFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  * {
+    color: #000 !important;
+  }
 }
-
+.page {
+  .container {
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+}
+.container {
+  width: 80%;
+  margin: 0px auto;
+}
 .footer {
-  width: 100%; height: 80px; line-height: 80px;
-  color: #FFF; background-color: #000;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  color: #000;
+  background-color: #FFF;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
   text-align: center;
+  &.sticky {
+    position: fixed;
+    bottom: 0px;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 2;
+  .modal-close {
+    position: relative;
+    top: 10px;
+    right: 10px;
+  }
+  .modal-container {
+    width: 50%;
+    margin: 100px auto;
+    padding: 10px;
+    background-color: #FFF;
+  }
 }
 
 .btn {
-  display: inline-block; padding: 10px 20px;
-  color: #FFF; background-color: #693; border-radius: 5px;
+  padding: 10px 20px;
+  color: #369;
+  background-color: #FFF;
+  border: solid #369 1px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
   cursor: pointer;
-} .btn:hover {
-  background-color: #063;
+  transition: all 0.1s ease;
+  &:hover {
+    color: #FFF;
+    background-color: #369;
+  }
 }
