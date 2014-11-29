@@ -8,6 +8,4 @@ class CreateBls < ActiveRecord::Migration
       t.timestamps
     end
   end
-
-  add_index :bls, :name, unique: true
 end
