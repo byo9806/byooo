@@ -12,9 +12,9 @@ function stickyFooter() {
 
 function modal(modal) {
   if(modal == '#') {
-    $('.modal').hide();
+    $('.modal').fadeOut();
   } else {
-    $(modal).show();
+    $(modal).fadeIn();
     containerHeight = $(modal).find('.container').height()+20;
     $(modal).find('.container').css('margin-top', -containerHeight/2 + 'px');
   }
