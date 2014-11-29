@@ -1,3 +1,34 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#Articles {
+  width: 100%;
+  li {
+    width: 20%;
+    .article {
+      width: auto;
+      margin: 10px 5px;
+      background-color: #FFF;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      opacity: 0.8;
+      transition: all 0.2s ease;
+      h3, p, h5 {
+        padding: 10px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        -webkit-filter: grayscale(1);
+      }
+      &:hover, &.mine {
+        img {
+          -webkit-filter: grayscale(0);
+        }
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

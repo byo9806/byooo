@@ -8,24 +8,52 @@
 </head>
 <body>
 
-<div class="header">
-  <div class="container">
-    <div class="float-left">
-      <a href="/">
-        <h1>Logo</h1>
-      </a>
-    </div>
-    <div class="float-right">
-      <a href="/byo">User</a>
+<div class="layout">
+  <div class="header">
+    <div class="container">
+      <div class="float-left">
+        <a href="/">
+          <h1>Logo</h1>
+        </a>
+      </div>
+      <div class="float-right">
+        <a href="#Login" data-role="modal">Login</a> / 
+        <a href="#SignUp" data-role="modal">Sign Up</a>
+      </div>
     </div>
   </div>
-</div>
-<div class="page">
-  <div class="container">
+  <div class="page">
+    <div class="container">
 <%= yield %>  </div>
+  </div>
+  <div class="footer">
+    Footer
+  </div>
 </div>
-<div class="footer">
-  Footer
+
+<div id="Login" class="modal">
+  <div class="container" style="width: 200px;">
+    <div class="close">
+      <a href="#" data-role="modal" class="btn">X</a>
+    </div>
+    <h1>Login</h1>
+    <input type="text" name="id"><br>
+    <input type="password" name="pw"><br>
+    <a href="#" class="btn">Login</a>
+  </div>
+</div>
+<div id="SignUp" class="modal">
+  <div class="container" style="width: 200px;">
+    <div class="close">
+      <a href="#" data-role="modal" class="btn">X</a>
+    </div>
+    <h1>Sign Up</h1>
+    <input type="text" name="id"><br>
+    <input type="password" name="pw"><br>
+    <input type="password" name="pw"><br>
+    <input type="text" name="name"><br>
+    <a href="#" class="btn">Sign Up</a>
+  </div>
 </div>
 
 </body>
